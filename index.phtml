@@ -10,6 +10,43 @@
     <link rel="stylesheet" type="text/css" href="css/main.css">
   </head>
   <body>
-    
+    <header class="container">
+      <section class="row" id="header-section">
+        <div class="header-banner" id="banner"></div>
+        <nav class="navbar navbar-default">
+          <div class="container-fluid">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              <a class="navbar-brand" href="home">Project</a>
+            </div>
+            <div id="navbar" class="collapse navbar-collapse">
+              <form class="navbarSearchForm navbar-form navbar-right">
+                <div class="form-group">
+                  <input type="text" class="form-control" placeholder="search">
+                </div>
+                <button type="submit" class="btn btn-success">Search</button>
+              </form>
+            </div>
+          </div>
+        </nav>
+      </section>
+    </header>
+    <main class="container">
+
+      <section class="row" id="main-section-row">
+
+        <?php include("admin/admin.html"); ?>
+
+        </section>
+      </section>
+    </main>
+    <footer class="container">
+        <p class="text-muted">Sticky footer.</p>
+    </footer>
   </body>
 </html>
