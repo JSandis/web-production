@@ -4,29 +4,7 @@ body {
 }
 
 body, #header-section {
-	background-color: #000;
-}
-
-.container {
 	background-color: #fff;
-}
-
-main {
-  min-height: 70%;
-	border-radius: 4px;
-	border: 1px solid transparent;
-  margin-bottom: 20px;
-  padding: 10px;
-}
-
-footer {
-  height: 40px;
-  border-top-left-radius: 4px;
-  border-top-right-radius: 4px;
-  border-bottom-right-radius: 0;
-  border-bottom-left-radius: 0;
-  border: 1px solid transparent;
-  padding: 5px;
 }
 
 .header-banner {
@@ -42,6 +20,71 @@ footer {
   border-bottom-left-radius: 4px;
 }
 
+.navbar {
+  margin-bottom: 0;
+}
+
+.navbar-red {
+  background-image: linear-gradient(to bottom,#dd4945 0,#c12e2a 100%);
+  border-color: #d9534f;
+  color: #fff;
+}
+
+.navbar-red a {
+  color: #fff;
+}
+
+.navbar-red .navbar-toggle:hover, .navbar-default .navbar-toggle:focus {
+  background-image: linear-gradient(to bottom,#dd4945 0,#c12e2a 100%);
+}
+
+.navbar-red .navbar-toggle {
+border-color: #dd4945;
+}
+
+.navbar-red .navbar-toggle .icon-bar {
+background-color: #888888;
+}
+
+main {
+  min-height: 70%;
+	border-radius: 4px;
+	border: 1px solid #d9534f;
+  /*margin-bottom: 20px;*/
+  padding: 10px;
+  border-top: 0;
+  border-bottom: 0;
+}
+
+.panel-grey > .panel-heading {
+  color: #fff;
+  /*background-color: #B74934;*/
+  background-image: linear-gradient(to bottom,#d9534f 0,#c12e2a 100%);
+  border-color: #d9534f;
+}
+
+.panel-grey {
+border-color: #d9534f;
+}
+
+footer {
+  min-height: 50px;
+  border-top-left-radius: 4px;
+  border-top-right-radius: 4px;
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
+  border: 1px solid transparent;
+  padding: 5px;
+
+  background-image: linear-gradient(to bottom,#dd4945 0,#c12e2a 100%);
+  border-color: #d9534f;
+}
+
+footer p,
+footer a {
+  color: #fff;
+}
+
 @media all and (max-width: 1190px) and (min-width: 980px) {
   .header-banner {
     background-image: url("../images/star_wars_medium.jpg");
@@ -50,5 +93,11 @@ footer {
 @media all and (max-width: 979px) {
   .header-banner {
     background-image: url("../images/star_wars_small.jpg");
+  }
+
+  .collapse.in .navbar-form,
+  .collapsing .navbar-form {
+    margin-top: 0;
+    margin-bottom: 0;
   }
 }
