@@ -56,14 +56,14 @@ main {
   border-bottom: 0;
 }
 
-.panel-grey > .panel-heading {
+.panel-red > .panel-heading {
   color: #fff;
   /*background-color: #B74934;*/
   background-image: linear-gradient(to bottom,#d9534f 0,#c12e2a 100%);
   border-color: #d9534f;
 }
 
-.panel-grey {
+.panel-red {
 border-color: #d9534f;
 }
 
