@@ -1,103 +1,85 @@
-html,
-body {
+html, body {
+  min-height: 100%;
   height: 100%;
 }
 
-body, #header-section {
-	background-color: #fff;
+.navbar-grey {
+  background-image: linear-gradient(to bottom,#343334 0,#171717 100%);
+  border-color: #171717;
 }
 
-.header-banner {
-  height: 200px;
+.navbar-grey .navbar-brand,
+.navbar-inverse .navbar-nav > li > a {
+  color: #B5B5B5;
+}
+
+.navbar-grey .navbar-collapse, .navbar-grey .navbar-form {
+  border-color: #171717;
+}
+
+.navbar-grey .navbar-toggle:hover, .navbar-default .navbar-toggle:focus {
+  background-image: linear-gradient(to bottom,#343334 0,#171717 100%);
+}
+
+.navbar-grey .navbar-toggle {
+  border-color: #171717;
+}
+
+.navbar-grey .navbar-toggle .icon-bar {
+  background-color: #888888;
+}
+
+.jumbotron {
   background-image: url("../images/star_wars_large.jpg");
-  background-size: cover;
-  background-position: 50% 40%;
-  background-repeat: no-repeat;
-  border-radius: 4px;
-  border-top-left-radius: 0;
-  border-top-right-radius: 0;
-  border-bottom-right-radius: 4px;
-  border-bottom-left-radius: 4px;
-}
-
-.navbar {
-  margin-bottom: 0;
-}
-
-.navbar-purple {
-  background-image: linear-gradient(to bottom,#7c5b85 0,#56475e 100%);
-  border-color: #56475e;
-  color: #fff;
-}
-
-.navbar-purple a {
-  color: #fff;
-}
-
-.navbar-purple .navbar-toggle:hover, .navbar-default .navbar-toggle:focus {
-  background-image: linear-gradient(to bottom,#7c5b85 0,#56475e 100%);
-}
-
-.navbar-purple .navbar-toggle {
-border-color: #56475e;
-}
-
-.navbar-purple .navbar-toggle .icon-bar {
-background-color: #888888;
+  min-height: 296px;
+  margin-top: 50px;
 }
 
 main {
-  min-height: 70%;
-	border-radius: 4px;
-	border: 1px solid #56475e;
-  /*margin-bottom: 20px;*/
-  padding: 10px;
-  border-top: 0;
-  border-bottom: 0;
-}
-
-.panel-purple > .panel-heading {
-  color: #fff;
-  /*background-color: #B74934;*/
-  background-image: linear-gradient(to bottom,#7c5b85 0,#56475e 100%);
-  border-color: #56475e;
-}
-
-.panel-purple {
-border-color: #56475e;
+  min-height: 80%;
 }
 
 footer {
   min-height: 50px;
-  border-top-left-radius: 4px;
-  border-top-right-radius: 4px;
-  border-bottom-right-radius: 0;
-  border-bottom-left-radius: 0;
-  border: 1px solid transparent;
-  padding: 5px;
-
-  background-image: linear-gradient(to bottom,#7c5b85 0,#56475e 100%);
-  border-color: #56475e;
+  background-color: #222;
+  position: absolute;
+  width: 100%;
+  background-image: linear-gradient(to bottom,#343334 0,#171717 100%);
+  border-color: #171717;
 }
 
-footer p,
-footer a {
-  color: #fff;
+footer p {
+  float: left;
+  height: 50px;
+  padding: 15px 15px;
+  font-size: 14px;
+  line-height: 15px;
+  margin: 0;
+  color: #B5B5B5;
 }
 
 @media all and (max-width: 1190px) and (min-width: 980px) {
-  .header-banner {
-    background-image: url("../images/star_wars_medium.jpg");
+  .jumbotron {
+    background-image: url("../images/star_wars_large.jpg");
+    margin-top: 50px;
   }
 }
 @media all and (max-width: 979px) {
-  .header-banner {
-    background-image: url("../images/star_wars_small.jpg");
+  .jumbotron {
+    background-image: url("../images/star_wars_large.jpg");
+    margin-top: 50px;
+  }
+
+  .navbar-grey .navbar-header {
+    background-image: linear-gradient(to bottom,#343334 0,#171717 100%);
+    border-color: #171717;
   }
 
   .collapse.in .navbar-form,
   .collapsing .navbar-form {
     margin-top: 0;
     margin-bottom: 0;
+    background-image: linear-gradient(to bottom,#343334 0,#171717 100%);
+    border-color: #171717;
   }
 }
