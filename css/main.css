@@ -35,8 +35,32 @@ html, body {
   margin-top: 50px;
 }
 
+.panel-heading h3 {
+  font-size: 24px;
+  font-weight: 400;
+  margin: 20px 0 0 0;
+}
+
 main {
   min-height: 80%;
+}
+
+.menu-link-fields .input-group {
+  width: 100%;
+  margin-bottom: 5px;
+}
+
+.menu-link-fields .input-group .input-group-addon {
+  width: 25%;
+}
+
+.menu-link-fields .input-group-weight {
+  width: 50%;
+  margin-bottom: 5px;
+}
+
+.menu-link-fields .input-group-weight .input-group-addon {
+  width: 50%;
 }
 
 footer {

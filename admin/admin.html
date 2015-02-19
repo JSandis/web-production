@@ -1,31 +1,97 @@
-<section class="side-bar col-xs-10 col-sm-8 col-md-4 col-lg-4 col-xs-offset-1 col-sm-offset-2 col-md-offset-0 col-lg-offset-0">
-  <section class="panel panel-purple">
+<section id="side-bar" class="col-md-3">
+  <section class="panel">
     <div class="panel-heading">
-      <h3 class="panel-title">Sidebar</h3>
+      <h3>Admin</h3>
     </div>
     <div class="panel-body">
       <ul class="nav nav-pills nav-stacked">
-        <li><a href="#">Link 1</a></li>
-        <li><a href="#">Link 2</a></li>
+        <li><a href="page-list">Page list</a></li>
+        <li><a href="page-form">Add page</a></li>
       </ul>
     </div>
   </section>
 </section>
-<section id="page" class="col-xs-12 col-sm-12 col-md-8 col-lg-8">
-  <section id="pages-list" class="col-xs-12 col-sm-12 col-md-8 col-lg-8">
-    <div class="panel panel-purple">
-      <div class="panel-heading">
-        <h3 class="panel-title">Pages</h3>
-      </div>
-      <table class="table">
-        <tr class="table-heads">
-          <th>ID:</th>
-          <th>Title:</th>
-          <th>Author:</th>
-          <th>Created:</th>
-          <th>Actions:</th>
-        </tr>
-      </table>
+
+<section id="page-list" class="col-md-8">
+  <div class="panel">
+    <div class="panel-heading">
+      <h2>Pages</h2>
     </div>
-  </section>
+    <table class="table">
+      <tr class="table-heads">
+        <th>ID:</th>
+        <th>Title:</th>
+        <th>Author:</th>
+        <th>Created:</th>
+        <th>Actions:</th>
+      </tr>
+    </table>
+  </div>
+</section>
+
+<section id="page-form" class="col-md-8">
+  <form class="form-horizontal">
+    <div class="form-group">
+      <div class="col-sm-8 col-sm-offset-2">
+        <h2>Create new page:</h2>
+      </div>
+    </div>
+    <div class="form-group">
+      <label class="col-sm-2 control-label" for="page-title">Title</label>
+      <div class="col-sm-10">
+        <input type="text" id="page-title" class="form-control" placeholder="Enter page title" required>
+      </div>
+    </div>
+    <div class="form-group">
+      <label class="col-sm-2 control-label" for="page-url">Url</label>
+      <div class="col-sm-10">
+        <div class="input-group page-url-group">
+          <span class="input-group-addon">
+            <input type="checkbox">
+          </span>
+          <input type="text" id="page-url" class="form-control" placeholder="Enter page url" disabled>
+        </div>
+      </div>
+    </div>
+    <div class="form-group">
+      <label class="col-sm-2 control-label" for="page-body">Body</label>
+      <div class="col-sm-10">
+        <textarea id="page-body" class="form-control" rows="10" placeholder="Enter page body content" required></textarea>
+      </div>
+    </div>
+    <div class="form-group add-parent-menu">
+      <label class="col-sm-2 control-label" for="page-menu">Menu</label>
+      <div class="col-sm-10">
+        <div class="checkbox">
+          <label>
+            <input type="checkbox" id="page-menu" value=""> Add to menu
+          </label>
+        </div>
+      </div>
+      <div class="col-sm-10 col-sm-offset-2 menu-link-fields">
+        
+        <div class="input-group">
+          <span class="input-group-addon">Title:</span>
+          <input type="text" class="form-control" id="menu-link-title" placeholder="Enter title for menu link...">
+        </div>
+
+        <div class="input-group">
+          <span class="input-group-addon">Parent menu:</span>
+          <div class="menu-select">
+          </div>
+        </div>
+
+        <div class="input-group input-group-weight">
+          <span class="input-group-addon">Weight:</span>
+          <input type="number" value="0" id="menu-link-weight" class="form-control">
+        </div>
+
+      </div>
+    </div>
+    <div class="form-group">
+      <div class="col-sm-offset-2 col-sm-10">
+        <button type="submit" class="btn btn-success btn-lg">Save Page</button>
+      </div>
+    </div>
+  </form>
 </section>
