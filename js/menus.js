@@ -11,7 +11,7 @@ function createMainMenu(data) {
 function buildMainSubMenus(mainMenuHtml, menuItems) {
   for (var i = 0; i < menuItems.length; i++) {
     var menuLink;
-
+    
     if (menuItems[i].children.length < 1) {
       menuLink = $('<li><a href="'+menuItems[i].path+'">'+menuItems[i].title+'</a></li>');
     } else {
@@ -50,6 +50,37 @@ function createMenuTree(menuData) {
     if(!link.menu_link_id){continue;}
     hash["_"+link.menu_link_id].children.push(link);
   }
-
+  console.log("menuTree: ", menuTree);
   return menuTree;
+}
+
+function createFormMenuSelect(data) {
+  var menuTree = createMenuTree(data);
+  var selectHtml = $('<select class="form-control"/>');
+  var topOption = $('<option value="">Top</option>');
+
+  topOption.data("menu-item", {id: null, menu: "menu-main-menu"});
+  selectHtml.append(topOption);
+  selectHtml = buildSelectOptions(selectHtml, menuTree, 0);
+
+  $("#page-form .menu-select").html(selectHtml);
+}
+
+function buildSelectOptions(selectHtml, menuItems, level) {
+  for (var i = 0; i < menuItems.length; i++) {
+    var depthIndicator = "-";
+
+    for (var j = 0; j < level; j++) {
+      depthIndicator += "-";
+    }
+
+    var option = $('<option value="'+menuItems[i].id+'">'+depthIndicator+" "+menuItems[i].title+'</option>');
+    option.data("menu-item", menuItems[i]);
+    selectHtml.append(option);
+
+    if (menuItems[i].children.length > 0) {
+      selectHtml = buildSelectOptions(selectHtml, menuItems[i].children, level+1);
+    }
+  }
+  return selectHtml;
 }

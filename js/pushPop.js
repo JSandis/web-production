@@ -16,6 +16,9 @@ function showPage(pageUrl) {
 
   if (pageUrl == "page-list") {
     getPages();
+  } else if (pageUrl == "page-form") {
+    $("#page-form .menu-link-fields").hide();
+    getMenuLinks("menu-main-menu", createFormMenuSelect);
   } else { 
     getCurrentPage(pageUrl);
     pageUrl = "page";

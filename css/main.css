@@ -7,27 +7,54 @@ html, body {
   background-image: linear-gradient(to bottom,#343334 0,#171717 100%);
   border-color: #171717;
 }
-
 .navbar-grey .navbar-brand,
 .navbar-inverse .navbar-nav > li > a {
   color: #B5B5B5;
 }
-
 .navbar-grey .navbar-collapse, .navbar-grey .navbar-form {
   border-color: #171717;
 }
-
 .navbar-grey .navbar-toggle:hover, .navbar-default .navbar-toggle:focus {
   background-image: linear-gradient(to bottom,#343334 0,#171717 100%);
 }
-
 .navbar-grey .navbar-toggle {
   border-color: #171717;
 }
-
 .navbar-grey .navbar-toggle .icon-bar {
   background-color: #888888;
 }
+
+.dropdown-menu > .dropdown > .dropdown-menu {
+  top: 0;
+  left: 100%;
+  margin-top: -6px;
+  margin-left: -1px;
+}
+.dropdown:hover > .dropdown-menu {
+  display: block;
+}
+.dropdown:hover > .dropdown-menu > li {
+  background-image: linear-gradient(to bottom,#343334 0,#171717 100%);
+  border: 1px solid;
+  border-color: #171717;
+  height: 35px;
+}
+.dropdown:hover > .dropdown-menu > li > a {
+  color: #B5B5B5;
+  padding: 5px 20px;
+}
+.dropdown > .dropdown-menu > li:hover > a {
+  color: #fff;
+  background: transparent;
+}
+.dropdown-menu {
+  background: transparent;
+  padding: 0;
+}
+.dropdown-menu:nth-child(n) .dropdown-menu {
+  top: 4px;
+} 
+
 
 .jumbotron {
   background-image: url("../images/star_wars_large.jpg");
@@ -49,16 +76,13 @@ main {
   width: 100%;
   margin-bottom: 5px;
 }
-
 .menu-link-fields .input-group .input-group-addon {
   width: 25%;
 }
-
 .menu-link-fields .input-group-weight {
   width: 50%;
   margin-bottom: 5px;
 }
-
 .menu-link-fields .input-group-weight .input-group-addon {
   width: 50%;
 }
@@ -71,7 +95,6 @@ footer {
   background-image: linear-gradient(to bottom,#343334 0,#171717 100%);
   border-color: #171717;
 }
-
 footer p {
   float: left;
   height: 50px;

@@ -41,4 +41,20 @@ function getMenuLinks(menu_machine_name, successFunction) {
     }
   });
 }
+
+function saveNewPage(pageFormData) {
+  $.ajax({
+    url: "php/save_page.php",
+    type: "post",
+    dataType: "json",
+    data: {
+      "page_data" : pageFormData
+    },
+    success: function(data) {
+      goToPage("content-list");
+    },
+    error: function(data) {
+      console.log("saveNewPage error: ", data);
+    }
+  });
 }
