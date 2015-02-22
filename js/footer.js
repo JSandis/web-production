@@ -1,5 +1,4 @@
 function showFooterContent(data) {
-	console.log("footerContent: ", data);
   $("#footer-div").html("");
   var pageHtml = $('<div class="footer-content"/>');
   pageHtml.append("<p>&copy;"+data["footer_data"][0]["description"]+"</p>");
