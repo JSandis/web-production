@@ -1,10 +1,10 @@
-function getPages(search_parameter) {
+function getPages(searchParameter) {
   $.ajax({
     url: "php/get_content.php",
     type: "get",
     dataType: "json",
     data: {
-      "search_parameter": search_parameter
+      "search_parameter": searchParameter
     },
     success: listPages,
     error: function(data) {
@@ -55,6 +55,20 @@ function saveNewPage(pageFormData) {
     },
     error: function(data) {
       console.log("saveNewPage error: ", data);
+    }
+  });
+}
+
+function getFooterContent(searchParameter) {
+  $.ajax({
+    url: "php/get_footer_content.php",
+    dataType: "json",
+    data: {
+      "search_parameter": searchParameter
+    },
+    success: showFooterContent,
+    error: function(data) {
+      console.log("getFooterContent error: ", data.responseText);
     }
   });
 }

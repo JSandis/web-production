@@ -1,9 +1,11 @@
 function onPopAndStart(){
   var url = location.href;
-  var pageName = url.substring(url.lastIndexOf("/")+1);
-  pageName = pageName || false;
+  var pageUrl = url.substring(url.lastIndexOf("/")+1);
+  pageUrl = pageUrl || false;
 
-  showPage(pageName);
+  if(pageUrl !== "upload.html") {
+    showPage(pageUrl);
+  }
 }
 
 function showPage(pageUrl) {
@@ -13,13 +15,14 @@ function showPage(pageUrl) {
   }
 
   getMenuLinks("menu-main-menu", createMainMenu);
+  getFooterContent();
 
   if (pageUrl == "page-list") {
     getPages();
   } else if (pageUrl == "page-form") {
     $("#page-form .menu-link-fields").hide();
     getMenuLinks("menu-main-menu", createFormMenuSelect);
-  } else { 
+  } else {
     getCurrentPage(pageUrl);
     pageUrl = "page";
   }
