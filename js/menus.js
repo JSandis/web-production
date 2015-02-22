@@ -50,7 +50,6 @@ function createMenuTree(menuData) {
     if(!link.menu_link_id){continue;}
     hash["_"+link.menu_link_id].children.push(link);
   }
-  console.log("menuTree: ", menuTree);
   return menuTree;
 }
 
