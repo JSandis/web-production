@@ -46,10 +46,10 @@ $(function() {
     	if ($('.add-parent-menu input[type="checkbox"]').is(":checked")) {
       		pageFormData.menuData = {};
       		pageFormData.menuData["parent"] = $('.add-parent-menu select').find(":selected").data("menu-item");
-      		pageFormData.menuData["title"] = $('.add-parent-menu #menu-title').val();
-      		pageFormData.menuData["weight"] = $('.add-parent-menu #menu-weight').val();
+      		pageFormData.menuData["title"] = $('.add-parent-menu #menu-link-title').val();
+      		pageFormData.menuData["weight"] = $('.add-parent-menu #menu-link-weight').val();
   		}
-  		
+
     	saveNewPage(pageFormData);
     	this.reset();
     	return false;
