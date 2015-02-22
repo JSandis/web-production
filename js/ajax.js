@@ -51,7 +51,7 @@ function saveNewPage(pageFormData) {
       "page_data" : pageFormData
     },
     success: function(data) {
-      goToPage("content-list");
+      goToPage("page-list");
     },
     error: function(data) {
       console.log("saveNewPage error: ", data);
