@@ -3,66 +3,21 @@ html, body {
   height: 100%;
 }
 
-.navbar-grey {
-  background-image: linear-gradient(to bottom,#343334 0,#171717 100%);
-  border-color: #171717;
-}
-.navbar-grey .navbar-brand,
-.navbar-inverse .navbar-nav > li > a {
-  color: #B5B5B5;
-}
-.navbar-grey .navbar-collapse, .navbar-grey .navbar-form {
-  border-color: #171717;
-}
-.navbar-grey .navbar-toggle:hover, .navbar-default .navbar-toggle:focus {
-  background-image: linear-gradient(to bottom,#343334 0,#171717 100%);
-}
-.navbar-grey .navbar-toggle {
-  border-color: #171717;
-}
-.navbar-grey .navbar-toggle .icon-bar {
-  background-color: #888888;
-}
-
-.dropdown-menu > .dropdown > .dropdown-menu {
-  top: 0;
-  left: 100%;
-  margin-top: -6px;
-  margin-left: -1px;
-}
-.dropdown:hover > .dropdown-menu {
-  display: block;
-}
-.dropdown:hover > .dropdown-menu > li {
-  background-image: linear-gradient(to bottom,#343334 0,#171717 100%);
-  border: 1px solid;
-  border-color: #171717;
-  height: 35px;
-}
-.dropdown:hover > .dropdown-menu > li > a {
-  color: #B5B5B5;
-  padding: 5px 20px;
-}
-.dropdown > .dropdown-menu > li:hover > a {
-  color: #fff;
-  background: transparent;
-}
-.dropdown-menu {
-  background: transparent;
-  padding: 0;
-}
-.dropdown-menu:nth-child(n) .dropdown-menu {
-  top: 4px;
-} 
-
-
 .jumbotron {
   background-image: url("../images/star_wars_large.jpg");
   min-height: 296px;
   margin-top: 50px;
 }
 
-.panel-heading h3 {
+p, a {
+  font-family: 'Oswald', sans-serif;
+}
+
+h1, h2, h3, h4, #header-section, #header-section a {
+  font-family: 'Happy Monkey';
+}
+
+h3 {
   font-size: 24px;
   font-weight: 400;
   margin: 20px 0 0 0;
@@ -72,11 +27,11 @@ main {
   min-height: 80%;
 }
 
-.menu-link-fields .input-group {
+.input-groups .input-group {
   width: 100%;
   margin-bottom: 5px;
 }
-.menu-link-fields .input-group .input-group-addon {
+.input-groups .input-group .input-group-addon {
   width: 25%;
 }
 .menu-link-fields .input-group-weight {
@@ -85,6 +40,37 @@ main {
 }
 .menu-link-fields .input-group-weight .input-group-addon {
   width: 50%;
+}
+
+#image-file,
+#image-file:focus
+#image-file:hover {
+  background: transparent;
+}
+
+#image-dialog {
+  display: none;
+  overflow: hidden;
+}
+
+#image-form .form-group {
+  margin-right: 0;
+  margin-left: 0;
+}
+
+#upload-iframe {
+  width: 100%;
+  height: 250px;
+  display: block;
+  border: 0;
+  margin-top: 5px;
+}
+.image-fields {
+  padding-right: 0;
+  padding-left: 0;
+}
+#image-button {
+  margin-left: 15px;
 }
 
 footer {
@@ -96,13 +82,17 @@ footer {
   border-color: #171717;
 }
 footer p {
+  font-family: "Happy Monkey";
   float: left;
   height: 50px;
   padding: 15px 15px;
-  font-size: 14px;
+  font-size: 12px;
   line-height: 15px;
   margin: 0;
   color: #B5B5B5;
+}
+#footer-div {
+  margin-right: 0;
 }
 
 @media all and (max-width: 1190px) and (min-width: 980px) {
@@ -115,18 +105,5 @@ footer p {
   .jumbotron {
     background-image: url("../images/star_wars_large.jpg");
     margin-top: 50px;
-  }
-
-  .navbar-grey .navbar-header {
-    background-image: linear-gradient(to bottom,#343334 0,#171717 100%);
-    border-color: #171717;
-  }
-
-  .collapse.in .navbar-form,
-  .collapsing .navbar-form {
-    margin-top: 0;
-    margin-bottom: 0;
-    background-image: linear-gradient(to bottom,#343334 0,#171717 100%);
-    border-color: #171717;
   }
 }
