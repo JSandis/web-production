@@ -54,6 +54,18 @@ $(function() {
     	this.reset();
     	return false;
 	});
+
+	$('#image-button').click(function() {
+		if($('.theuploader').length !== 0){
+	      $('.theuploader').remove();
+	      $(this).text('Visa filuppladdaren');
+	      return;
+	    }
+
+	    var ifr = $('<iframe id="upload-iframe" class="theuploader"/>');
+	    ifr.attr('src','admin/upload.html');
+	    $(this).text('Dölj filuppladdaren').after(ifr);
+	});
 });
 
 function generateMachineName(inputText) {
